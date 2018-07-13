@@ -9,4 +9,4 @@ addons:
   ssh_known_hosts: 68.168.138.112
 after_success:
 - chmod 600 ~/.ssh/id_rsa
-- ssh travis@68.168.138.112 -p 27402 -o StrictHostKeyChecking=no 'cd /home/travis/testtravis && git pull && go build main.go'
+- ssh travis@68.168.138.112 -p 27402 -o StrictHostKeyChecking=no 'cd /home/travis/testtravis && git pull && /usr/local/go/bin/go build main.go'
